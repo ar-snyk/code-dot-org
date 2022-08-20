@@ -167,7 +167,7 @@ gem 'omniauth-windowslive', '~> 0.0.11', github: 'wjordan/omniauth-windowslive',
 
 # Resolve CVE 2015 9284
 # see: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9284
-gem 'omniauth-rails_csrf_protection', '~> 0.1'
+gem 'omniauth-rails_csrf_protection', '~> 0.1', '>= 0.1.2'
 
 gem 'bootstrap-sass', '~> 2.3.2.2'
 
@@ -301,7 +301,7 @@ gem 'octokit'
 gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
 gem 'rambling-trie'
 
-gem 'omniauth-openid'
+gem 'omniauth-openid', '>= 2.0.1'
 gem 'omniauth-openid-connect', github: 'wjordan/omniauth-openid-connect', ref: 'cdo'
 
 # Ref: https://github.com/toy/image_optim/pull/145
