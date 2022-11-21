@@ -28,7 +28,7 @@ gem 'sinatra', '2.0.2', require: 'sinatra/base'
 
 gem 'mysql2', '>= 0.4.1'
 
-gem 'dalli' # memcached
+gem 'dalli' , '>= 3.2.3' # memcached
 gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
 gem 'google_drive'
 gem 'jumphash'
