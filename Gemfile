@@ -9,7 +9,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '6.0.4.1'
+gem 'rails', '6.1.7.1'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -19,7 +19,7 @@ gem 'sprockets-rails'
 
 # provide `respond_to` methods
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
-gem 'responders', '~> 3.0'
+gem 'responders', '~> 3.0', '>= 3.0.1'
 
 # Pinning sinatra to 2.0.2, since '~> 2.0.2' actually lands us on 2.0.5, which
 # breaks some firebase URIs. See
@@ -151,7 +151,7 @@ gem 'gemoji'
 
 # Authentication and permissions.
 gem 'cancancan', '~> 3.0.0'
-gem 'devise', '~> 4.7.0'
+gem 'devise', '~> 4.7.3'
 gem 'devise_invitable', '~> 1.6.0'
 
 # Ref: https://github.com/instructure/ims-lti/pull/90
@@ -167,7 +167,7 @@ gem 'omniauth-windowslive', '~> 0.0.11', github: 'wjordan/omniauth-windowslive',
 
 # Resolve CVE 2015 9284
 # see: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9284
-gem 'omniauth-rails_csrf_protection', '~> 0.1'
+gem 'omniauth-rails_csrf_protection', '~> 0.1', '>= 0.1.2'
 
 gem 'bootstrap-sass', '~> 2.3.2.2'
 
@@ -221,16 +221,16 @@ gem 'twilio-ruby' # SMS API for send-to-phone feature
 # - /dashboard/public/fonts/
 # - /pegasus/sites.v3/code.org/public/fonts/
 # - /pegasus/sites.v3/hourofcode/public/fonts/
-gem 'font-awesome-rails', '~> 4.7.0.5'
+gem 'font-awesome-rails', '~> 4.7.0.6'
 
 gem 'sequel'
 gem 'user_agent_parser'
 
-gem 'paranoia', '~> 2.4.2'
+gem 'paranoia', '~> 2.4.3'
 gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
-gem 'active_model_serializers', '~> 0.10.10'
+gem 'active_model_serializers', '~> 0.10.12'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
@@ -291,7 +291,7 @@ gem 'firebase_token_generator'
 gem 'sshkit'
 gem 'validates_email_format_of'
 
-gem 'composite_primary_keys', '~> 12.0'
+gem 'composite_primary_keys', '~> 13.0', '>= 13.0.0'
 
 # GitHub API; used by the DotD script to automatically create new
 # releases on deploy
@@ -315,7 +315,7 @@ gem 'image_optim_rails', github: 'wjordan/image_optim_rails', ref: 'rails_root_c
 gem 'image_size', require: false
 
 # Auto strip model attributes before validation (opt in)
-gem 'auto_strip_attributes', '~> 2.1'
+gem 'auto_strip_attributes', '~> 2.1', '>= 2.1.0'
 
 # Used to sort UTF8 strings properly
 gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'
