@@ -9,7 +9,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '6.0.4.1'
+gem 'rails', '6.1.7.3'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -19,16 +19,16 @@ gem 'sprockets-rails'
 
 # provide `respond_to` methods
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
-gem 'responders', '~> 3.0'
+gem 'responders', '~> 3.0', '>= 3.0.1'
 
 # Pinning sinatra to 2.0.2, since '~> 2.0.2' actually lands us on 2.0.5, which
 # breaks some firebase URIs. See
 # https://github.com/code-dot-org/code-dot-org/pull/31614
-gem 'sinatra', '2.0.2', require: 'sinatra/base'
+gem 'sinatra', '2.2.3', require: 'sinatra/base'
 
 gem 'mysql2', '>= 0.4.1'
 
-gem 'dalli' # memcached
+gem 'dalli' , '>= 3.2.3' # memcached
 gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
 gem 'google_drive'
 gem 'jumphash'
@@ -75,9 +75,9 @@ group :development, :test do
 
   gem 'active_record_query_trace'
   gem 'benchmark-ips'
-  gem 'better_errors'
+  gem 'better_errors', '>= 2.8.0'
   gem 'binding_of_caller'
-  gem 'brakeman'
+  gem 'brakeman', '>= 4.7.1'
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'ruby-prof'
   gem 'vcr', require: false
@@ -87,12 +87,12 @@ group :development, :test do
   gem 'codecov', require: false
   gem 'fakeredis', require: false
   gem 'mocha', require: false
-  gem 'simplecov', '~> 0.9', require: false
+  gem 'simplecov', '~> 0.15', '>= 0.15.1', require: false
   gem 'sqlite3'
   gem 'timecop'
 
   # For UI testing.
-  gem 'cucumber'
+  gem 'cucumber', '>= 4.0.0'
   gem 'eyes_selenium', '3.18.4'
   gem 'minitest', '~> 5.5'
   gem 'minitest-around'
@@ -103,7 +103,7 @@ group :development, :test do
   gem 'selenium-webdriver', '3.141.0'
   gem 'spring'
   gem 'spring-commands-testunit'
-  gem 'webdrivers', '~> 3.0'
+  gem 'webdrivers', '~> 3.7', '>= 3.7.2'
 
   # For pegasus PDF generation / merging testing.
   gem 'parallel_tests'
@@ -112,7 +112,7 @@ end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+  gem 'sdoc', '>= 1.0.0', require: false
 end
 
 # Needed for unit testing, and also for /rails/mailers email previews.
@@ -127,7 +127,7 @@ gem 'gctools', github: 'wjordan/gctools', ref: 'ruby-2.5'
 gem 'nakayoshi_fork'
 # Ref: https://github.com/puma/puma/pull/1646
 gem 'puma', github: 'wjordan/puma', branch: 'debugging'
-gem 'puma_worker_killer'
+gem 'puma_worker_killer', '>= 0.1.1'
 gem 'unicorn', '~> 5.1.0'
 
 gem 'chronic', '~> 0.10.2'
@@ -142,7 +142,7 @@ gem 'sassc-rails', github: 'code-dot-org/sassc-rails', ref: 'frozen-array-fix'
 gem 'uglifier', '>= 1.3.0'
 
 # Use jquery as the JavaScript library.
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 4.4.0'
 
 gem 'phantomjs', '~> 1.9.7.1'
 
@@ -151,7 +151,7 @@ gem 'gemoji'
 
 # Authentication and permissions.
 gem 'cancancan', '~> 3.0.0'
-gem 'devise', '~> 4.7.0'
+gem 'devise', '~> 4.7.3'
 gem 'devise_invitable', '~> 1.6.0'
 
 # Ref: https://github.com/instructure/ims-lti/pull/90
@@ -167,15 +167,15 @@ gem 'omniauth-windowslive', '~> 0.0.11', github: 'wjordan/omniauth-windowslive',
 
 # Resolve CVE 2015 9284
 # see: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9284
-gem 'omniauth-rails_csrf_protection', '~> 0.1'
+gem 'omniauth-rails_csrf_protection', '~> 0.1', '>= 0.1.2'
 
-gem 'bootstrap-sass', '~> 2.3.2.2'
+gem 'bootstrap-sass', '~> 3.4.0.0'
 
 gem 'haml', '~> 5.2.0'
 
 gem 'jquery-ui-rails', '~> 6.0.1'
 
-gem 'nokogiri', '>= 1.10.0'
+gem 'nokogiri', '>= 1.13.9'
 
 gem 'highline', '~> 1.6.21'
 
@@ -188,7 +188,7 @@ gem 'newrelic_rpm', group: [:staging, :development, :production], # perf/error/e
   # https://github.com/newrelic/newrelic-ruby-agent/issues/340
   github: 'code-dot-org/newrelic-ruby-agent', ref: 'PR-359_prevent_reconnect_attempts_during_shutdowns'
 
-gem 'redcarpet', '~> 3.3.4'
+gem 'redcarpet', '~> 3.5.1'
 
 gem 'geocoder'
 
@@ -197,7 +197,7 @@ gem 'rmagick'
 
 gem 'acts_as_list'
 
-gem 'kaminari' # pagination
+gem 'kaminari' , '>= 1.2.1' # pagination
 
 gem 'stringex', '~> 2.5.2' # Provides String.to_ascii
 
@@ -221,16 +221,16 @@ gem 'twilio-ruby' # SMS API for send-to-phone feature
 # - /dashboard/public/fonts/
 # - /pegasus/sites.v3/code.org/public/fonts/
 # - /pegasus/sites.v3/hourofcode/public/fonts/
-gem 'font-awesome-rails', '~> 4.7.0.5'
+gem 'font-awesome-rails', '~> 4.7.0.6'
 
 gem 'sequel'
-gem 'user_agent_parser'
+gem 'user_agent_parser', '>= 2.6.0'
 
-gem 'paranoia', '~> 2.4.2'
+gem 'paranoia', '~> 2.4.3'
 gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
-gem 'active_model_serializers', '~> 0.10.10'
+gem 'active_model_serializers', '~> 0.10.12'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
@@ -253,7 +253,7 @@ gem 'aws-sdk-secretsmanager'
 group :development, :staging, :levelbuilder do
   gem 'haml_lint', require: false
   gem 'rubocop', '~> 0.52', require: false
-  gem 'scss_lint', require: false
+  gem 'scss_lint', '>= 0.51.0', require: false
 end
 
 # Reduce volume of production logs
@@ -269,7 +269,7 @@ gem 'pusher', '~> 1.3.1', require: false
 gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 
 gem 'daemons'
-gem 'httparty'
+gem 'httparty', '>= 0.21.0'
 gem 'net-scp'
 gem 'net-ssh'
 gem 'oj'
@@ -291,7 +291,7 @@ gem 'firebase_token_generator'
 gem 'sshkit'
 gem 'validates_email_format_of'
 
-gem 'composite_primary_keys', '~> 12.0'
+gem 'composite_primary_keys', '~> 13.0', '>= 13.0.0'
 
 # GitHub API; used by the DotD script to automatically create new
 # releases on deploy
@@ -301,7 +301,7 @@ gem 'octokit'
 gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
 gem 'rambling-trie'
 
-gem 'omniauth-openid'
+gem 'omniauth-openid', '>= 2.0.1'
 gem 'omniauth-openid-connect', github: 'wjordan/omniauth-openid-connect', ref: 'cdo'
 
 # Ref: https://github.com/toy/image_optim/pull/145
@@ -315,7 +315,7 @@ gem 'image_optim_rails', github: 'wjordan/image_optim_rails', ref: 'rails_root_c
 gem 'image_size', require: false
 
 # Auto strip model attributes before validation (opt in)
-gem 'auto_strip_attributes', '~> 2.1'
+gem 'auto_strip_attributes', '~> 2.1', '>= 2.1.0'
 
 # Used to sort UTF8 strings properly
 gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'
@@ -324,7 +324,7 @@ gem 'StreetAddress', require: "street_address"
 
 gem 'recaptcha', require: 'recaptcha/rails'
 
-gem 'loofah', ' ~> 2.2.1'
+gem 'loofah', '~> 2.19.1'
 
 # Install pg gem only on specific production hosts and the i18n-dev server.
 require_pg = -> do
