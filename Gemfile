@@ -9,17 +9,17 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '6.0.4.1'
+gem 'rails', '6.1.7.5'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
 # Ref: https://github.com/rails/sprockets/pull/470
 gem 'sprockets', github: 'wjordan/sprockets', ref: 'concurrent_asset_bundle_3.x'
-gem 'sprockets-rails'
+gem 'sprockets-rails', '>= 3.3.0'
 
 # provide `respond_to` methods
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
-gem 'responders', '~> 3.0'
+gem 'responders', '~> 3.1', '>= 3.1.0'
 
 # Pinning sinatra to 2.0.2, since '~> 2.0.2' actually lands us on 2.0.5, which
 # breaks some firebase URIs. See
@@ -51,9 +51,9 @@ gem 'memory_profiler'
 gem 'rack-mini-profiler'
 
 group :development do
-  gem 'annotate', '~> 3.1.1'
+  gem 'annotate', '~> 3.2.0'
   gem 'aws-google' # use Google Accounts for AWS access
-  gem 'web-console'
+  gem 'web-console', '>= 3.4.0'
 end
 
 # Rack::Cache middleware used in development/test;
@@ -78,7 +78,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'brakeman'
-  gem 'haml-rails' # haml (instead of erb) generators
+  gem 'haml-rails' , '>= 2.1.0' # haml (instead of erb) generators
   gem 'ruby-prof'
   gem 'vcr', require: false
   # For unit testing.
@@ -101,7 +101,7 @@ group :development, :test do
   gem 'rinku'
   gem 'rspec'
   gem 'selenium-webdriver', '3.141.0'
-  gem 'spring'
+  gem 'spring', '>= 2.0.2'
   gem 'spring-commands-testunit'
   gem 'webdrivers', '~> 3.0'
 
@@ -116,7 +116,7 @@ group :doc do
 end
 
 # Needed for unit testing, and also for /rails/mailers email previews.
-gem 'factory_girl_rails', group: [:development, :staging, :test, :adhoc]
+gem 'factory_girl_rails', '>= 4.8.0', group: [:development, :staging, :test, :adhoc]
 
 # For pegasus PDF generation.
 gem 'open_uri_redirections', require: false
@@ -142,7 +142,7 @@ gem 'sassc-rails', github: 'code-dot-org/sassc-rails', ref: 'frozen-array-fix'
 gem 'uglifier', '>= 1.3.0'
 
 # Use jquery as the JavaScript library.
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 4.2.0'
 
 gem 'phantomjs', '~> 1.9.7.1'
 
@@ -151,8 +151,8 @@ gem 'gemoji'
 
 # Authentication and permissions.
 gem 'cancancan', '~> 3.0.0'
-gem 'devise', '~> 4.7.0'
-gem 'devise_invitable', '~> 1.6.0'
+gem 'devise', '~> 4.8.0'
+gem 'devise_invitable', '~> 1.6.1'
 
 # Ref: https://github.com/instructure/ims-lti/pull/90
 gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
@@ -167,7 +167,7 @@ gem 'omniauth-windowslive', '~> 0.0.11', github: 'wjordan/omniauth-windowslive',
 
 # Resolve CVE 2015 9284
 # see: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9284
-gem 'omniauth-rails_csrf_protection', '~> 0.1'
+gem 'omniauth-rails_csrf_protection', '~> 1.0', '>= 1.0.0'
 
 gem 'bootstrap-sass', '~> 2.3.2.2'
 
@@ -195,9 +195,9 @@ gem 'geocoder'
 gem 'mini_magick', ">=4.9.4"
 gem 'rmagick'
 
-gem 'acts_as_list'
+gem 'acts_as_list', '>= 1.1.0'
 
-gem 'kaminari' # pagination
+gem 'kaminari' , '>= 1.0.0' # pagination
 
 gem 'stringex', '~> 2.5.2' # Provides String.to_ascii
 
@@ -221,16 +221,16 @@ gem 'twilio-ruby' # SMS API for send-to-phone feature
 # - /dashboard/public/fonts/
 # - /pegasus/sites.v3/code.org/public/fonts/
 # - /pegasus/sites.v3/hourofcode/public/fonts/
-gem 'font-awesome-rails', '~> 4.7.0.5'
+gem 'font-awesome-rails', '~> 4.7.0.6'
 
 gem 'sequel'
 gem 'user_agent_parser'
 
-gem 'paranoia', '~> 2.4.2'
+gem 'paranoia', '~> 2.4.3'
 gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
-gem 'active_model_serializers', '~> 0.10.10'
+gem 'active_model_serializers', '~> 0.10.12'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
@@ -266,7 +266,7 @@ gem 'rack-ssl-enforcer'
 # PubSub for NetSim
 gem 'pusher', '~> 1.3.1', require: false
 
-gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
+gem 'youtube-dl.rb', '>= 0.3.1.2016.08.28', group: [:development, :staging, :levelbuilder]
 
 gem 'daemons'
 gem 'httparty'
@@ -291,7 +291,7 @@ gem 'firebase_token_generator'
 gem 'sshkit'
 gem 'validates_email_format_of'
 
-gem 'composite_primary_keys', '~> 12.0'
+gem 'composite_primary_keys', '~> 13.0', '>= 13.0.0'
 
 # GitHub API; used by the DotD script to automatically create new
 # releases on deploy
@@ -315,7 +315,7 @@ gem 'image_optim_rails', github: 'wjordan/image_optim_rails', ref: 'rails_root_c
 gem 'image_size', require: false
 
 # Auto strip model attributes before validation (opt in)
-gem 'auto_strip_attributes', '~> 2.1'
+gem 'auto_strip_attributes', '~> 2.2', '>= 2.2.0'
 
 # Used to sort UTF8 strings properly
 gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'
@@ -337,8 +337,8 @@ install_if require_pg do
 end
 
 gem 'active_record_union'
-gem 'activerecord-import'
-gem 'scenic'
+gem 'activerecord-import', '>= 0.23.0'
+gem 'scenic', '>= 1.5.2'
 gem 'scenic-mysql_adapter'
 
 gem 'colorize'
@@ -348,7 +348,7 @@ gem 'hammerspace'
 
 gem 'require_all', require: false
 
-gem 'dotiw'
+gem 'dotiw', '>= 5.0.0'
 
 gem 'datapackage'
 
