@@ -19,7 +19,7 @@ gem 'sprockets-rails'
 
 # provide `respond_to` methods
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
-gem 'responders', '~> 3.0'
+gem 'responders', '~> 3.1', '>= 3.1.0'
 
 # Pinning sinatra to 2.0.2, since '~> 2.0.2' actually lands us on 2.0.5, which
 # breaks some firebase URIs. See
@@ -51,9 +51,9 @@ gem 'memory_profiler'
 gem 'rack-mini-profiler'
 
 group :development do
-  gem 'annotate', '~> 3.1.1'
+  gem 'annotate', '~> 3.2.0'
   gem 'aws-google' # use Google Accounts for AWS access
-  gem 'web-console'
+  gem 'web-console', '>= 3.4.0'
 end
 
 # Rack::Cache middleware used in development/test;
@@ -78,7 +78,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'brakeman'
-  gem 'haml-rails' # haml (instead of erb) generators
+  gem 'haml-rails' , '>= 2.1.0' # haml (instead of erb) generators
   gem 'ruby-prof'
   gem 'vcr', require: false
   # For unit testing.
@@ -116,7 +116,7 @@ group :doc do
 end
 
 # Needed for unit testing, and also for /rails/mailers email previews.
-gem 'factory_girl_rails', group: [:development, :staging, :test, :adhoc]
+gem 'factory_girl_rails', '>= 4.8.0', group: [:development, :staging, :test, :adhoc]
 
 # For pegasus PDF generation.
 gem 'open_uri_redirections', require: false
@@ -142,7 +142,7 @@ gem 'sassc-rails', github: 'code-dot-org/sassc-rails', ref: 'frozen-array-fix'
 gem 'uglifier', '>= 1.3.0'
 
 # Use jquery as the JavaScript library.
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 4.2.0'
 
 gem 'phantomjs', '~> 1.9.7.1'
 
@@ -151,8 +151,8 @@ gem 'gemoji'
 
 # Authentication and permissions.
 gem 'cancancan', '~> 3.0.0'
-gem 'devise', '~> 4.7.0'
-gem 'devise_invitable', '~> 1.6.0'
+gem 'devise', '~> 4.8.0'
+gem 'devise_invitable', '~> 1.6.1'
 
 # Ref: https://github.com/instructure/ims-lti/pull/90
 gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
@@ -195,7 +195,7 @@ gem 'geocoder'
 gem 'mini_magick', ">=4.9.4"
 gem 'rmagick'
 
-gem 'acts_as_list'
+gem 'acts_as_list', '>= 1.1.0'
 
 gem 'kaminari' # pagination
 
@@ -221,7 +221,7 @@ gem 'twilio-ruby' # SMS API for send-to-phone feature
 # - /dashboard/public/fonts/
 # - /pegasus/sites.v3/code.org/public/fonts/
 # - /pegasus/sites.v3/hourofcode/public/fonts/
-gem 'font-awesome-rails', '~> 4.7.0.5'
+gem 'font-awesome-rails', '~> 4.7.0.8'
 
 gem 'sequel'
 gem 'user_agent_parser'
@@ -315,7 +315,7 @@ gem 'image_optim_rails', github: 'wjordan/image_optim_rails', ref: 'rails_root_c
 gem 'image_size', require: false
 
 # Auto strip model attributes before validation (opt in)
-gem 'auto_strip_attributes', '~> 2.1'
+gem 'auto_strip_attributes', '~> 2.2', '>= 2.2.0'
 
 # Used to sort UTF8 strings properly
 gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'
@@ -337,8 +337,8 @@ install_if require_pg do
 end
 
 gem 'active_record_union'
-gem 'activerecord-import'
-gem 'scenic'
+gem 'activerecord-import', '>= 0.23.0'
+gem 'scenic', '>= 1.5.2'
 gem 'scenic-mysql_adapter'
 
 gem 'colorize'
