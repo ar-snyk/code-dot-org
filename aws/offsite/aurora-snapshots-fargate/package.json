@@ -11,7 +11,7 @@
   "dependencies": {
     "aws-sdk": "latest",
     "promise-mysql": "latest",
-    "honeybadger": "latest"
+    "honeybadger": "1.4.0"
   },
   "devDependencies": {
     "mocha": "latest",
