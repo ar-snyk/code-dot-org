@@ -30,7 +30,7 @@ gem 'mysql2', '>= 0.4.1'
 
 gem 'dalli' # memcached
 gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
-gem 'google_drive'
+gem 'google_drive', '>= 3.0.7'
 gem 'jumphash'
 gem 'le', '~> 2.2'
 gem 'os'
@@ -40,7 +40,7 @@ gem 'redis', '~> 3.3.3'
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
 gem 'xxhash'
 
-gem 'google-api-client', '~> 0.23'
+gem 'google-api-client', '~> 0.53', '>= 0.53.0'
 
 # CSRF protection for Sinatra.
 gem 'rack_csrf'
@@ -52,7 +52,7 @@ gem 'rack-mini-profiler'
 
 group :development do
   gem 'annotate', '~> 3.1.1'
-  gem 'aws-google' # use Google Accounts for AWS access
+  gem 'aws-google' , '>= 0.1.8' # use Google Accounts for AWS access
   gem 'web-console'
 end
 
