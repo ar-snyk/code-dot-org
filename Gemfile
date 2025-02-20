@@ -9,7 +9,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '6.0.4.1'
+gem 'rails', '7.0.0'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -78,7 +78,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'brakeman'
-  gem 'haml-rails' # haml (instead of erb) generators
+  gem 'haml-rails' , '>= 2.1.0' # haml (instead of erb) generators
   gem 'ruby-prof'
   gem 'vcr', require: false
   # For unit testing.
@@ -93,7 +93,7 @@ group :development, :test do
 
   # For UI testing.
   gem 'cucumber'
-  gem 'eyes_selenium', '3.18.4'
+  gem 'eyes_selenium', '4.0.5.2'
   gem 'minitest', '~> 5.5'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
@@ -175,7 +175,7 @@ gem 'haml', '~> 5.2.0'
 
 gem 'jquery-ui-rails', '~> 6.0.1'
 
-gem 'nokogiri', '>= 1.10.0'
+gem 'nokogiri', '>= 1.18.3'
 
 gem 'highline', '~> 1.6.21'
 
@@ -197,7 +197,7 @@ gem 'rmagick'
 
 gem 'acts_as_list'
 
-gem 'kaminari' # pagination
+gem 'kaminari' , '>= 1.0.0' # pagination
 
 gem 'stringex', '~> 2.5.2' # Provides String.to_ascii
 
@@ -348,7 +348,7 @@ gem 'hammerspace'
 
 gem 'require_all', require: false
 
-gem 'dotiw'
+gem 'dotiw', '>= 5.0.0'
 
 gem 'datapackage'
 
