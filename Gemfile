@@ -9,7 +9,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '6.0.4.1'
+gem 'rails', '7.0.0'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -24,7 +24,7 @@ gem 'responders', '~> 3.0'
 # Pinning sinatra to 2.0.2, since '~> 2.0.2' actually lands us on 2.0.5, which
 # breaks some firebase URIs. See
 # https://github.com/code-dot-org/code-dot-org/pull/31614
-gem 'sinatra', '2.0.2', require: 'sinatra/base'
+gem 'sinatra', '4.0.0', require: 'sinatra/base'
 
 gem 'mysql2', '>= 0.4.1'
 
@@ -197,7 +197,7 @@ gem 'rmagick'
 
 gem 'acts_as_list'
 
-gem 'kaminari' # pagination
+gem 'kaminari' , '>= 1.0.0' # pagination
 
 gem 'stringex', '~> 2.5.2' # Provides String.to_ascii
 
@@ -348,7 +348,7 @@ gem 'hammerspace'
 
 gem 'require_all', require: false
 
-gem 'dotiw'
+gem 'dotiw', '>= 5.0.0'
 
 gem 'datapackage'
 
