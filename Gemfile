@@ -9,7 +9,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '6.0.4.1'
+gem 'rails', '7.1.5.2'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -51,7 +51,7 @@ gem 'memory_profiler'
 gem 'rack-mini-profiler'
 
 group :development do
-  gem 'annotate', '~> 3.1.1'
+  gem 'annotate', '~> 3.2.0'
   gem 'aws-google' # use Google Accounts for AWS access
   gem 'web-console'
 end
@@ -195,7 +195,7 @@ gem 'geocoder'
 gem 'mini_magick', ">=4.9.4"
 gem 'rmagick'
 
-gem 'acts_as_list'
+gem 'acts_as_list', '>= 1.1.0'
 
 gem 'kaminari' # pagination
 
@@ -226,7 +226,7 @@ gem 'font-awesome-rails', '~> 4.7.0.5'
 gem 'sequel'
 gem 'user_agent_parser'
 
-gem 'paranoia', '~> 2.4.2'
+gem 'paranoia', '~> 2.6.3'
 gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
@@ -315,7 +315,7 @@ gem 'image_optim_rails', github: 'wjordan/image_optim_rails', ref: 'rails_root_c
 gem 'image_size', require: false
 
 # Auto strip model attributes before validation (opt in)
-gem 'auto_strip_attributes', '~> 2.1'
+gem 'auto_strip_attributes', '~> 2.2', '>= 2.2.0'
 
 # Used to sort UTF8 strings properly
 gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'
@@ -337,9 +337,9 @@ install_if require_pg do
 end
 
 gem 'active_record_union'
-gem 'activerecord-import'
-gem 'scenic'
-gem 'scenic-mysql_adapter'
+gem 'activerecord-import', '>= 0.23.0'
+gem 'scenic', '>= 1.5.2'
+gem 'scenic-mysql_adapter', '>= 1.0.2'
 
 gem 'colorize'
 
