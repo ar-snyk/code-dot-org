@@ -246,7 +246,7 @@ gem 'aws-sdk-firehose'
 gem 'aws-sdk-glue'
 gem 'aws-sdk-rds'
 gem 'aws-sdk-route53'
-gem 'aws-sdk-s3'
+gem 'aws-sdk-s3', '>= 1.208.0'
 gem 'aws-sdk-secretsmanager'
 
 # Lint tools
@@ -281,7 +281,7 @@ gem 'rest-client', '~> 2.0.1'
 gem 'unf_ext', '0.0.7.2'
 
 # Generate SSL certificates.
-gem 'acmesmith', '~> 2.3.1'
+gem 'acmesmith', '~> 2.4.0'
 
 gem 'addressable'
 # bcrypt version specified due to "Invalid Hash" error in Linux
