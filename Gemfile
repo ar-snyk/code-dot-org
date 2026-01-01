@@ -269,7 +269,7 @@ gem 'pusher', '~> 1.3.1', require: false
 gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 
 gem 'daemons'
-gem 'httparty'
+gem 'httparty', '>= 0.24.0'
 gem 'net-scp'
 gem 'net-ssh'
 gem 'oj'
