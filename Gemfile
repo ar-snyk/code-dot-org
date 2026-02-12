@@ -30,7 +30,7 @@ gem 'mysql2', '>= 0.4.1'
 
 gem 'dalli' # memcached
 gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
-gem 'google_drive'
+gem 'google_drive', '>= 3.0.7'
 gem 'jumphash'
 gem 'le', '~> 2.2'
 gem 'os'
@@ -40,7 +40,7 @@ gem 'redis', '~> 3.3.3'
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
 gem 'xxhash'
 
-gem 'google-api-client', '~> 0.23'
+gem 'google-api-client', '~> 0.53', '>= 0.53.0'
 
 # CSRF protection for Sinatra.
 gem 'rack_csrf'
@@ -52,7 +52,7 @@ gem 'rack-mini-profiler'
 
 group :development do
   gem 'annotate', '~> 3.1.1'
-  gem 'aws-google' # use Google Accounts for AWS access
+  gem 'aws-google' , '>= 0.1.8' # use Google Accounts for AWS access
   gem 'web-console'
 end
 
@@ -93,7 +93,7 @@ group :development, :test do
 
   # For UI testing.
   gem 'cucumber'
-  gem 'eyes_selenium', '3.18.4'
+  gem 'eyes_selenium', '6.12.11'
   gem 'minitest', '~> 5.5'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
@@ -158,8 +158,8 @@ gem 'devise_invitable', '~> 1.6.0'
 gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
 # Ref: https://github.com/Clever/omniauth-clever/pull/7
 gem 'omniauth-clever', '~> 1.2.1', github: 'Clever/omniauth-clever'
-gem 'omniauth-facebook', '~> 4.0.0'
-gem 'omniauth-google-oauth2', '~> 0.6.0'
+gem 'omniauth-facebook', '~> 5.0.0'
+gem 'omniauth-google-oauth2', '~> 0.6.1'
 gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
 # Ref: https://github.com/joel/omniauth-windowslive/pull/16
 # Ref: https://github.com/joel/omniauth-windowslive/pull/17
@@ -212,7 +212,7 @@ gem 'mini_racer'
 
 gem 'jwt' # single signon for zendesk
 
-gem 'twilio-ruby' # SMS API for send-to-phone feature
+gem 'twilio-ruby' , '>= 5.67.0' # SMS API for send-to-phone feature
 
 # NOTE: apps/src/applab/Exporter.js depends on the specific names of the font
 # files included here. If you're upgrading to a different version, make sure to
@@ -281,7 +281,7 @@ gem 'rest-client', '~> 2.0.1'
 gem 'unf_ext', '0.0.7.2'
 
 # Generate SSL certificates.
-gem 'acmesmith', '~> 2.3.1'
+gem 'acmesmith', '~> 2.4.0'
 
 gem 'addressable'
 # bcrypt version specified due to "Invalid Hash" error in Linux
@@ -295,7 +295,7 @@ gem 'composite_primary_keys', '~> 12.0'
 
 # GitHub API; used by the DotD script to automatically create new
 # releases on deploy
-gem 'octokit'
+gem 'octokit', '>= 4.23.0'
 
 # Used to create a prefix trie of student names within a section
 gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
